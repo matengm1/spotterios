@@ -186,17 +186,27 @@
                                 <rect key="frame" x="277" y="545" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="uploadOptionDataTouchUpInside:" destination="vJF-mh-Pkc" eventType="touchUpInside" id="nsZ-Iu-iE2"/>
                                     <segue destination="xED-ul-y4V" kind="show" animates="NO" id="1OF-JZ-Nuc"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="08y-YM-Uar">
                                 <rect key="frame" x="198" y="347" width="204" height="31"/>
+                                <connections>
+                                    <action selector="anySliderValueChanged:" destination="vJF-mh-Pkc" eventType="valueChanged" id="YvV-CX-gWV"/>
+                                </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="55Y-Zi-BB1">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="55Y-Zi-BB1">
                                 <rect key="frame" x="198" y="309" width="204" height="31"/>
+                                <connections>
+                                    <action selector="anySliderValueChanged:" destination="vJF-mh-Pkc" eventType="valueChanged" id="vf2-Bj-BnL"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QM5-Yo-klf">
                                 <rect key="frame" x="198" y="385" width="204" height="31"/>
+                                <connections>
+                                    <action selector="anySliderValueChanged:" destination="vJF-mh-Pkc" eventType="valueChanged" id="tcR-zz-5Nj"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -214,6 +224,11 @@
                             <constraint firstItem="08y-YM-Uar" firstAttribute="centerX" secondItem="hMf-Sd-RXy" secondAttribute="centerX" id="tJd-VF-xz6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="sliderCollection" destination="55Y-Zi-BB1" collectionClass="NSMutableArray" id="aiM-gK-m5R"/>
+                        <outletCollection property="sliderCollection" destination="08y-YM-Uar" collectionClass="NSMutableArray" id="gMe-ei-FQT"/>
+                        <outletCollection property="sliderCollection" destination="QM5-Yo-klf" collectionClass="NSMutableArray" id="Wkr-XP-5TB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTa-1b-r0U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -235,22 +250,39 @@
                                 <rect key="frame" x="273" y="550" width="55" height="30"/>
                                 <state key="normal" title="Confirm"/>
                                 <connections>
+                                    <action selector="switchDataSubmitTouchUpInside:" destination="uLU-EI-GB3" eventType="touchUpInside" id="I1S-gX-D4H"/>
                                     <segue destination="Q2V-Zi-jIc" kind="show" id="S1R-jT-WRa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgw-AO-s7m">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgw-AO-s7m">
                                 <rect key="frame" x="265" y="72" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fLb-2b-TyJ">
+                                <rect key="frame" x="276" y="293" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H93-Zh-Ked">
+                                <rect key="frame" x="276" y="348" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rRB-gC-KzP">
+                                <rect key="frame" x="276" y="405" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="H93-Zh-Ked" firstAttribute="top" secondItem="fLb-2b-TyJ" secondAttribute="bottom" constant="200" id="3cS-Xf-TVC"/>
+                            <constraint firstItem="rRB-gC-KzP" firstAttribute="width" secondItem="fLb-2b-TyJ" secondAttribute="width" id="46T-Aa-ZDJ"/>
                             <constraint firstItem="mWG-B6-kfU" firstAttribute="centerX" secondItem="5Mf-vp-dI2" secondAttribute="centerX" id="Hnu-Qb-NL2"/>
+                            <constraint firstItem="H93-Zh-Ked" firstAttribute="width" secondItem="fLb-2b-TyJ" secondAttribute="width" id="LKn-8M-7Xa"/>
+                            <constraint firstItem="H93-Zh-Ked" firstAttribute="centerX" secondItem="fLb-2b-TyJ" secondAttribute="centerX" id="PsX-N0-eLt"/>
+                            <constraint firstItem="rRB-gC-KzP" firstAttribute="top" secondItem="fLb-2b-TyJ" secondAttribute="bottom" constant="81" id="R4F-r5-hFy"/>
                             <constraint firstItem="cgw-AO-s7m" firstAttribute="top" secondItem="tkF-4d-2Zc" secondAttribute="bottom" constant="8" id="VKJ-Hb-M6d"/>
+                            <constraint firstItem="rRB-gC-KzP" firstAttribute="centerX" secondItem="fLb-2b-TyJ" secondAttribute="centerX" id="ZCP-nV-jHq"/>
                             <constraint firstItem="ofq-hG-pg6" firstAttribute="top" secondItem="mWG-B6-kfU" secondAttribute="bottom" constant="20" id="nTv-dA-oHy"/>
                             <constraint firstItem="cgw-AO-s7m" firstAttribute="centerX" secondItem="5Mf-vp-dI2" secondAttribute="centerX" id="xru-uP-EhC"/>
+                            <constraint firstItem="fLb-2b-TyJ" firstAttribute="centerX" secondItem="5Mf-vp-dI2" secondAttribute="centerX" id="zR5-cR-wpb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ngG-Ks-INa">
@@ -265,6 +297,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outletCollection property="switchCollection" destination="fLb-2b-TyJ" collectionClass="NSMutableArray" id="0bV-Vj-dkD"/>
+                        <outletCollection property="switchCollection" destination="H93-Zh-Ked" collectionClass="NSMutableArray" id="wVY-R8-oaQ"/>
+                        <outletCollection property="switchCollection" destination="rRB-gC-KzP" collectionClass="NSMutableArray" id="YUS-zS-tuF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afJ-ui-pVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

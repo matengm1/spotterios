@@ -84,12 +84,5 @@ class RegisterViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
 
     }
-    
-    
-    
-    
-    
-    
-    
 }
 
