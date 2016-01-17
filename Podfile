@@ -5,5 +5,9 @@ use_frameworks!
 
 target 'Spotter' do
   pod 'Parse'
+  pod 'Bolts'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKShareKit'
+  pod 'FBSDKLoginKit'
 
 end

@@ -85,9 +85,15 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Spotter/Bolts.framework"
+  install_framework "Pods-Spotter/FBSDKCoreKit.framework"
+  install_framework "Pods-Spotter/FBSDKLoginKit.framework"
+  install_framework "Pods-Spotter/FBSDKShareKit.framework"
   install_framework "Pods-Spotter/Parse.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Spotter/Bolts.framework"
+  install_framework "Pods-Spotter/FBSDKCoreKit.framework"
+  install_framework "Pods-Spotter/FBSDKLoginKit.framework"
+  install_framework "Pods-Spotter/FBSDKShareKit.framework"
   install_framework "Pods-Spotter/Parse.framework"
 fi
