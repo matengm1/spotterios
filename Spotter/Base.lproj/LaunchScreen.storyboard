@@ -24,11 +24,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WNf-DI-R8Y">
+                                <rect key="frame" x="290" y="318" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="WNf-DI-R8Y" firstAttribute="centerX" secondItem="dCa-sB-Rfg" secondAttribute="centerX" id="35a-r3-oh3"/>
                             <constraint firstItem="dCa-sB-Rfg" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="9oC-sb-Mow"/>
                             <constraint firstItem="dCa-sB-Rfg" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="cGQ-Hk-yUx"/>
+                            <constraint firstItem="WNf-DI-R8Y" firstAttribute="top" secondItem="dCa-sB-Rfg" secondAttribute="bottom" constant="8" id="lUd-zz-zX5"/>
                             <constraint firstItem="dCa-sB-Rfg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="qip-gF-VIE"/>
                         </constraints>
                     </view>

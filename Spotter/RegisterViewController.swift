@@ -77,9 +77,11 @@ class RegisterViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         user.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if error == nil {
-                // Hooray! Let them use the app now.
+                SptrConstants.currentUser = self.UsernameTF.text
+                print(SptrConstants.currentUser)
+                self.performSegueWithIdentifier("LoginSegue", sender: self)
             } else {
-                // Examine the error object and inform the user.
+                print(error)
             }
         }
 

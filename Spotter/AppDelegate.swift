@@ -30,6 +30,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         print("Running")
+        
+        
+        
+        
+        var query = PFQuery(className:"Planner")
+        query.getObjectInBackgroundWithId("mCUQEomOON") {
+            (Planner: PFObject?, error: NSError?) -> Void in
+            if error == nil && Planner != nil {
+                print(Planner)
+            } else {
+                print(error)
+            }
+        }
+
+
+        
+        
+        
+        
+        
+        
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
